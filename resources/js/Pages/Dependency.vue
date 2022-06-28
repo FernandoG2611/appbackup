@@ -1,5 +1,5 @@
 <script>
-import AppLayout from '@/Layouts/AppLayout.vue';
+import LayoutApp from '@/Layouts/LayoutApp.vue';
 
 import { InteractsWithQueryBuilder, Tailwind2 } from '@protonemedia/inertiajs-tables-laravel-query-builder';
 
@@ -8,7 +8,7 @@ export default {
 
   components: {
     Table: Tailwind2.Table,
-    AppLayout
+    LayoutApp
   },
 
   props: {
@@ -34,16 +34,11 @@ const RootComponent = {
 </script>
 
 <template>
-    <AppLayout title="Dashboard">
-        <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Lista de Dependencias
-            </h2>
-        </template>
+    <LayoutApp title="Dashboard">
 
         <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+            <!-- <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg"> -->
                    
                    <Table
                         :filters="queryBuilderProps.filters"
@@ -66,8 +61,8 @@ const RootComponent = {
                         </tr>
                         </template>
                     </Table>
-                </div>
-            </div>
+                <!-- </div>
+            </div> -->
         </div>
-    </AppLayout>
+    </LayoutApp>
 </template>
