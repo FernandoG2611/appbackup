@@ -34,5 +34,5 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    Route::get('/dependency', [DependencyController::class, 'index'])->name('dependency');
+    Route::resource('dependency', DependencyController::class);
 });

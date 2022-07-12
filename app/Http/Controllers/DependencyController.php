@@ -83,7 +83,8 @@ class DependencyController extends Controller
      */
     public function edit($id)
     {
-        //
+        $respuesta = Dependency::findOrFail($id);
+        return $respuesta;
     }
 
     /**
